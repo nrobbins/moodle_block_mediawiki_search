@@ -36,6 +36,11 @@ class block_mediawiki_search extends block_base {
 			} else {
 				$this->title = get_string('pluginname', 'block_mediawiki_search');
 			}
+			if (!empty($this->config->showtitle)) {
+				$this->showtitle = $this->config->showtitle;
+			} else {
+				$this->showtitle = 0;
+			}
 			if (!empty($this->config->address)) {
 				$this->address = $this->config->address;
 			} else {
@@ -45,6 +50,13 @@ class block_mediawiki_search extends block_base {
 				$this->logo = $this->config->logo;
 			} else {
 				$this->logo = $CFG->wwwroot.'/blocks/mediawiki_search/Wiki.png';
+			}
+		}
+		public function hide_header() {	
+			if ($this->showtitle==1) {
+				return false;
+			} else {
+				return true;
 			}
 		}
     function applicable_formats() {

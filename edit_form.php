@@ -36,7 +36,14 @@ class block_mediawiki_search_edit_form extends block_edit_form {
 				$mform->setType('config_title', PARAM_MULTILANG);
 				
 				$mform->addHelpButton('config_title', 'blocktitle', 'block_mediawiki_search');
-        
+
+				//Show title?
+				//$mform->addElement('checkbox', 'config_showtitle', get_string('showtitle', 'block_mediawiki_search'));
+				$mform->addElement('advcheckbox', 'config_showtitle', get_string('showtitle', 'block_mediawiki_search'), '');
+				$mform->setDefault('config_showtitle', 1);
+				
+				$mform->addHelpButton('config_showtitle', 'showtitle', 'block_mediawiki_search');
+				        
         //Select address of the MediaWiki installation
         $mform->addElement('text', 'config_address', get_string('blockaddress', 'block_mediawiki_search'), 'size="64"');
         $mform->setDefault('config_address', 'http://www.mediawiki.org/wiki/MediaWiki');
