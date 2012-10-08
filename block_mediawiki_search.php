@@ -80,7 +80,8 @@ class block_mediawiki_search extends block_base {
 					$this->content->text .= '<img src="'.$this->logo.'" alt="'.get_string('blocktitle', 'block_mediawiki_search').'" />';
 				}
 				$this->content->text .= '<input type="text" name="search" id="MWS_text" />';
-				$this->content->text .= '<input type="submit" name="submit" value="'.get_string('search', 'block_mediawiki_search').'" id="MWS_search"/>';
+				$this->content->text .= '<input type="submit" name="go" value="'.get_string('go', 'block_mediawiki_search').'" id="MWS_go"/>';
+				$this->content->text .= '<button type="submit" name="fulltext" value="Search" id="MWS_search">'.get_string('search', 'block_mediawiki_search').'</button>';
 				$this->content->text .= '</form>';
         $this->content->footer = '';
 				

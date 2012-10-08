@@ -34,4 +34,5 @@ $string['blockaddress_help'] = 'The address of the wiki. Should be something lik
 $string['showlogo'] = 'Display a Logo?';
 $string['blocklogo'] = 'Wiki Logo';
 $string['blocklogo_help'] = 'The location of the logo image file.';
+$string['go'] = 'Go';
 $string['search'] = 'Search';

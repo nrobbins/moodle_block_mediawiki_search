@@ -8,3 +8,7 @@ width:90%;
 width:95%;
 height:1.5em;
 }
+#mediawiki_search #MWS_go{padding:1px 5px 1px 5px;margin-top:2px;}
+#mediawiki_search #MWS_go, #mediawiki_search #MWS_search{
+float:left;
+}
