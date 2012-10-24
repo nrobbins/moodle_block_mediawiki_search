@@ -19,48 +19,46 @@
  *
  * @package    block
  * @subpackage mediawiki_search
- * @copyright  2012 onwards Nathan Robbins
+ * @copyright  2012 onwards Nathan Robbins (https://github.com/nrobbins)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_mediawiki_search_edit_form extends block_edit_form {
  
     protected function specific_definition($mform) {
-				global $CFG;
-        //$context = $this->page->context;
+        global $CFG;
         // Section header title according to language file.
         $mform->addElement('header', 'configheader', get_string('blocksettings', 'block_mediawiki_search'));
 
-        // Give the block a title
-				$mform->addElement('text', 'config_title', get_string('blocktitle', 'block_mediawiki_search'));
-				$mform->setDefault('config_title', get_string('pluginname', 'block_mediawiki_search'));
-				$mform->setType('config_title', PARAM_MULTILANG);
-				
-				$mform->addHelpButton('config_title', 'blocktitle', 'block_mediawiki_search');
+        // Give the block a title.
+        $mform->addElement('text', 'config_title', get_string('blocktitle', 'block_mediawiki_search'));
+        $mform->setDefault('config_title', get_string('pluginname', 'block_mediawiki_search'));
+        $mform->setType('config_title', PARAM_MULTILANG);
+        
+        $mform->addHelpButton('config_title', 'blocktitle', 'block_mediawiki_search');
 
-				//Show title?
-				//$mform->addElement('checkbox', 'config_showtitle', get_string('showtitle', 'block_mediawiki_search'));
-				$mform->addElement('advcheckbox', 'config_showtitle', get_string('showtitle', 'block_mediawiki_search'), '');
-				$mform->setDefault('config_showtitle', 1);
-				
-				$mform->addHelpButton('config_showtitle', 'showtitle', 'block_mediawiki_search');
-				        
-        //Select address of the MediaWiki installation
+        // Show title?
+        $mform->addElement('advcheckbox', 'config_showtitle', get_string('showtitle', 'block_mediawiki_search'), '');
+        $mform->setDefault('config_showtitle', 1);
+        
+        $mform->addHelpButton('config_showtitle', 'showtitle', 'block_mediawiki_search');
+                        
+        // Select address of the MediaWiki installation.
         $mform->addElement('text', 'config_address', get_string('blockaddress', 'block_mediawiki_search'), 'size="64"');
         $mform->setDefault('config_address', 'http://www.mediawiki.org/wiki/MediaWiki');
         $mform->setType('config_address', PARAM_MULTILANG);
 
-				$mform->addHelpButton('config_address', 'blockaddress', 'block_mediawiki_search');
+        $mform->addHelpButton('config_address', 'blockaddress', 'block_mediawiki_search');
 
-				//Enable a logo?
-				$mform->addElement('checkbox', 'config_showlogo', get_string('showlogo', 'block_mediawiki_search'));
-				
-        //Select address of the MediaWiki logo
+        // Enable a logo?
+        $mform->addElement('checkbox', 'config_showlogo', get_string('showlogo', 'block_mediawiki_search'));
+                
+        // Select address of the MediaWiki logo.
         $mform->addElement('text', 'config_logo', get_string('blocklogo', 'block_mediawiki_search'), 'size="64"');
         $mform->setDefault('config_logo', $CFG->wwwroot.'/blocks/mediawiki_search/Wiki.png');
         $mform->setType('config_logo', PARAM_MULTILANG);
-				
-				$mform->addHelpButton('config_logo', 'blocklogo', 'block_mediawiki_search');
+                
+        $mform->addHelpButton('config_logo', 'blocklogo', 'block_mediawiki_search');
 
-				$mform->disabledIf('config_logo', 'config_showlogo');
+        $mform->disabledIf('config_logo', 'config_showlogo');
     }
 }

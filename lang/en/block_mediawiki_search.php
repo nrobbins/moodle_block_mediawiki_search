@@ -19,7 +19,7 @@
  * Strings for component 'block_mediawiki_search'
  *
  * @package   block_mediawiki_search
- * @copyright 2012 Nathan Robbins
+ * @copyright 2012 Nathan Robbins (https://github.com/nrobbins)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

@@ -19,14 +19,14 @@
  *
  * @package    block
  * @subpackage mediawiki_search
- * @copyright  2012 Nathan Robbins
+ * @copyright  2012 Nathan Robbins (https://github.com/nrobbins)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2012100300;        // The current plugin version (Date: YYYYMMDDXX)
+$plugin->version   = 2012102400;        // The current plugin version (Date: YYYYMMDDXX)
 $plugin->requires  = 2011112900;        // Requires this Moodle version
 $plugin->component = 'block_mediawiki_search'; // Full name of the plugin (used for diagnostics)
 $plugin->maturity  = MATURITY_BETA;
-$plugin->release   = "0.1"; // User-friendly version number
+$plugin->release   = "0.2.2"; // User-friendly version number
