@@ -62,7 +62,7 @@ class block_mediawiki_search extends block_base {
     }
     function applicable_formats() {
         return array(
-                'all' => true,
+                'all' => true
                 );
     }
     public function instance_allow_multiple() {
@@ -79,9 +79,9 @@ class block_mediawiki_search extends block_base {
         if(isset($this->config->showlogo)&&$this->config->showlogo == 1) {
             $this->content->text .= '<img src="'.$this->logo.'" alt="'.get_string('blocktitle', 'block_mediawiki_search').'" />';
         }
-        $this->content->text .= '<input type="text" name="search" id="MWS_text" />';
-        $this->content->text .= '<button type="submit" name="go" value="Go" id="MWS_search">'.get_string('go', 'block_mediawiki_search').'</button>';
-        $this->content->text .= '<button type="submit" name="fulltext" value="Search" id="MWS_search">'.get_string('search', 'block_mediawiki_search').'</button>';
+        $this->content->text .= '<input type="text" name="search" class="MWS_text" placeholder="'.get_string('search', 'block_mediawiki_search').'"/><br>';
+        $this->content->text .= '<button type="submit" name="go" value="Go" class="MWS_search">'.get_string('go', 'block_mediawiki_search').'</button>';
+        $this->content->text .= '<button type="submit" name="fulltext" value="Search" class="MWS_search">'.get_string('search', 'block_mediawiki_search').'</button>';
         $this->content->text .= '</form><div class="clearfix"></div>';
         $this->content->footer = '';
                 
