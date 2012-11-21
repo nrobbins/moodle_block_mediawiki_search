@@ -36,3 +36,5 @@ $string['blocklogo'] = 'Wiki Logo';
 $string['blocklogo_help'] = 'The location of the logo image file.';
 $string['go'] = 'Go';
 $string['search'] = 'Search';
+$string['mediawiki_search:myaddinstance'] = 'Add a new MediaWiki Search block';
+$string['mediawiki_search:addinstance'] = 'Add a new MediaWiki Search block';
